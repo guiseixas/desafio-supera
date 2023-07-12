@@ -8,6 +8,8 @@ import java.time.LocalDate;
 @Data
 public class TransferenciaFilterType {
 
+    private Long numeroConta;
+
     private String nomeOperadorTransacao;
 
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)

@@ -16,6 +16,7 @@ public class TransferenciaService {
 
     public List<Transferencia> findAll(TransferenciaFilterType filter){
         return transferenciaRepository.findAll(
+                filter.getNumeroConta(),
                 filter.getNomeOperadorTransacao(),
                 filter.getDataInicio(),
                 filter.getDataFim(),

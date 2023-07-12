@@ -4,7 +4,7 @@ import lombok.Data;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.time.ZonedDateTime;
+import java.time.LocalDate;
 
 @Entity
 @Data
@@ -16,7 +16,7 @@ public class Transferencia {
     private Long id;
 
     @Column(name = "data_transferencia", nullable = false)
-    private ZonedDateTime dataTransferencia;
+    private LocalDate dataTransferencia;
 
     @Column(name = "valor", nullable = false)
     private BigDecimal valor;

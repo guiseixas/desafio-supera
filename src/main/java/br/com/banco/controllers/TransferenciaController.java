@@ -5,6 +5,7 @@ import br.com.banco.services.TransferenciaService;
 import br.com.banco.types.TransferenciaFilterType;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,10 +25,10 @@ public class TransferenciaController {
     @CrossOrigin
     @GetMapping
     public ResponseEntity<?> findAll(TransferenciaFilterType filter){
-        log.info("Searching all transfers by: {}", filter);
+        log.info("Buscando todas as transferências por: {}", filter);
         List<Transferencia> transferencias = transferenciaService.findAll(filter);
         if (transferencias.isEmpty()) {
-            return ResponseEntity.notFound().build();
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Nenhum dado de transferência foi encontrado.");
         } else {
             return ResponseEntity.ok(transferencias);
         }

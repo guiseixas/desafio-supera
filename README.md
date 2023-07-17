@@ -10,3 +10,5 @@
 - O código está bem estruturado e dividido em pacotes que lidam com dados semelhantes: controllers, services, repositories, entities e types.
 - Foi adicionada a dependência do Lombok para a simplificação e diminuição de código nas entidades do projeto.
 - Os commits foram sendo feitos de acordo com o progresso de desenvolvimento.
+
+O front-end do projeto está disponível em [front-end](https://github.com/guiseixas/desafio-supera-react).
